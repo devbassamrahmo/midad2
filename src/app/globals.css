@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* CitadelScript */
+@font-face {
+  font-family: 'CitadelScript';
+  src: url('/fonts/CitadelScriptStd.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* EditorsNote Medium */
+@font-face {
+  font-family: 'EditorsNote';
+  src: url('/fonts/EditorsNote-Medium-iF664322be6500a.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Helvetica Neue Medium */
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('/fonts/HelveticaNeueLight.otf') format('opentype');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--background);
+  background: var(--foreground);
+  scroll-behavior: smooth;
+ 
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
