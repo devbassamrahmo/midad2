@@ -1,0 +1,14 @@
+{
+  "/Policy/page": "/Policy",
+  "/TermsOfUse/page": "/TermsOfUse",
+  "/_not-found/page": "/_not-found",
+  "/aboutUS/page": "/aboutUS",
+  "/contactUS/page": "/contactUS",
+  "/four-season/page": "/four-season",
+  "/news/[slug]/page": "/news/[slug]",
+  "/news/page": "/news",
+  "/page": "/",
+  "/projects/[id]/page": "/projects/[id]",
+  "/projects/page": "/projects",
+  "/projects/stars-avenue-mall/page": "/projects/stars-avenue-mall"
+}

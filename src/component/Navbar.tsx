@@ -1,40 +1,48 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
-import { usePathname } from 'next/navigation'
-import "animate.css"; // 
+import Image from "next/image";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import "animate.css"; //
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
-  const isHome = pathname === '/' || pathname === '/TermsOfUse' || pathname === '/Policy' || pathname === '/projects/crystal-gallery' ||  pathname === '/projects/coral-mall'  ||  pathname === '/projects/zohur-beach' 
-  || pathname === '/four-season' || pathname === '/projects/stars-avenue-mall' ||  pathname === '/aboutUS'
-  const closeMenu = () => setIsOpen(false)
+  const isHome =
+    pathname === "/" ||
+    pathname === "/TermsOfUse" ||
+    pathname === "/Policy" ||
+    pathname === "/projects/crystal-gallery" ||
+    pathname === "/projects/coral-mall" ||
+    pathname === "/projects/zohur-beach" ||
+    pathname === "/four-season" ||
+    pathname === "/projects/stars-avenue-mall" ||
+    pathname === "/aboutUS";
+  const closeMenu = () => setIsOpen(false);
 
   // link color: white on home, black elsewhere
-  const linkColor = isHome ? 'text-white' : 'text-black'
+  const linkColor = isHome ? "text-white" : "text-black";
 
   // header background behavior
   // - Home: transparent at top; on scroll -> subtle glass (blur + very light bg)
   // - Others: white always; on scroll -> add blur (keeps white)
- const headerBgClasses = isHome
-  ? (isScrolled || isOpen
-      ? 'bg-black/30 backdrop-blur-md'
-      : 'bg-transparent')
-  : (isScrolled || isOpen
-      ? 'bg-white/30 backdrop-blur-md'
-      : 'bg-transparent')
+  const headerBgClasses = isHome
+    ? isScrolled || isOpen
+      ? "bg-black/30 backdrop-blur-md"
+      : "bg-transparent"
+    : isScrolled || isOpen
+    ? "bg-white/30 backdrop-blur-md"
+    : "bg-transparent";
 
   useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 10)
-    onScroll()
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+    const onScroll = () => setIsScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <header
@@ -46,7 +54,9 @@ const Navbar = () => {
       {/* Top bar */}
       <div className="flex items-center justify-between py-5 lg:py-7 px-4 sm:px-6 lg:px-10 xl:px-[95px]">
         {/* Left links (desktop) */}
-        <nav className={`hidden lg:flex items-center gap-10  animate__animated animate__fadeInDown animate__slow ${linkColor}`}>
+        <nav
+          className={`hidden lg:flex items-center gap-10  animate__animated animate__fadeInDown animate__slow ${linkColor}`}
+        >
           <Link href="/" className="transition-colors font-helvetica">
             Home
           </Link>
@@ -61,7 +71,7 @@ const Navbar = () => {
         {/* Logo (swap if you have a dark/light version) */}
         <Link href="/">
           <Image
-            src={isHome ? '/logo.svg' : '/logoBlack.png'}
+            src={isHome ? "/logo.svg" : "/logoBlack.png"}
             alt="logo"
             width={180}
             height={33}
@@ -71,11 +81,19 @@ const Navbar = () => {
         </Link>
 
         {/* Right links (desktop) */}
-        <nav className={`hidden lg:flex items-center gap-10 animate__animated animate__fadeInDown animate__slow ${linkColor}`}>
-          <Link href="/news" className="hover:text-blue-400 transition-colors font-helvetica">
+        <nav
+          className={`hidden lg:flex items-center gap-10 animate__animated animate__fadeInDown animate__slow ${linkColor}`}
+        >
+          <Link
+            href="/news"
+            className="hover:text-blue-400 transition-colors font-helvetica"
+          >
             News
           </Link>
-          <Link href="/contactUS" className="hover:text-blue-400 transition-colors font-helvetica">
+          <Link
+            href="/contactUS"
+            className="hover:text-blue-400 transition-colors font-helvetica"
+          >
             Contact Us
           </Link>
         </nav>
@@ -90,17 +108,17 @@ const Navbar = () => {
           <div className="h-5 w-6 relative">
             <span
               className={`absolute left-0 top-0 h-[2px] w-6 bg-current transition-transform ${
-                isOpen ? 'translate-y-[9px] rotate-45' : ''
+                isOpen ? "translate-y-[9px] rotate-45" : ""
               }`}
             />
             <span
               className={`absolute left-0 top-[9px] h-[2px] w-6 bg-current transition-opacity ${
-                isOpen ? 'opacity-0' : 'opacity-100'
+                isOpen ? "opacity-0" : "opacity-100"
               }`}
             />
             <span
               className={`absolute left-0 bottom-0 h-[2px] w-6 bg-current transition-transform ${
-                isOpen ? '-translate-y-[9px] -rotate-45' : ''
+                isOpen ? "-translate-y-[9px] -rotate-45" : ""
               }`}
             />
           </div>
@@ -110,32 +128,54 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         className={`lg:hidden overflow-hidden transition-[max-height,opacity] duration-300 ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className={`${linkColor} px-4 sm:px-6 lg:px-10 xl:px-[95px] pb-4 pt-0`}>
+        <nav
+          className={`${linkColor} px-4 sm:px-6 lg:px-10 xl:px-[95px] pb-4 pt-0`}
+        >
           <div className="grid grid-cols-1 gap-3">
-            <Link href="/" onClick={closeMenu} className="hover:text-blue-400 transition-colors font-helvetica py-2">
+            <Link
+              href="/"
+              onClick={closeMenu}
+              className="hover:text-blue-400 transition-colors font-helvetica py-2"
+            >
               Home
             </Link>
-            <Link href="/aboutUS" onClick={closeMenu} className="hover:text-blue-400 transition-colors font-helvetica py-2">
+            <Link
+              href="/aboutUS"
+              onClick={closeMenu}
+              className="hover:text-blue-400 transition-colors font-helvetica py-2"
+            >
               About Us
             </Link>
-            <Link href="/projects" onClick={closeMenu} className="hover:text-blue-400 transition-colors font-helvetica py-2">
+            <Link
+              href="/projects"
+              onClick={closeMenu}
+              className="hover:text-blue-400 transition-colors font-helvetica py-2"
+            >
               Projects
             </Link>
-            <hr className={`${isHome ? 'border-white/10' : ''} my-2`} />
-            <Link href="/news" onClick={closeMenu} className="hover:text-blue-400 transition-colors font-helvetica py-2">
+            <hr className={`${isHome ? "border-white/10" : ""} my-2`} />
+            <Link
+              href="/news"
+              onClick={closeMenu}
+              className="hover:text-blue-400 transition-colors font-helvetica py-2"
+            >
               News
             </Link>
-            <Link href="/contactUS" onClick={closeMenu} className="hover:text-blue-400 transition-colors font-helvetica py-2">
+            <Link
+              href="/contactUS"
+              onClick={closeMenu}
+              className="hover:text-blue-400 transition-colors font-helvetica py-2"
+            >
               Contact Us
             </Link>
           </div>
         </nav>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
