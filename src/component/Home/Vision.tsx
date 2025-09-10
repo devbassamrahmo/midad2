@@ -73,7 +73,6 @@ const Vision = () => {
               &amp; Sustainability
             </h3>
           </div>
-
           <p className="font-helvetica text-[14px] sm:text-[16px] text-left lg:text-[18px] max-w-full lg:max-w-[600px]">
             By blending smart design, sustainability, and cultural authenticity,
             Midad ensures every development leaves a lasting impact while

@@ -19,16 +19,32 @@ export default function ContactInfo() {
         </Link>
 
         <div className="flex items-center gap-5 text-[#1b1b1b]">
-          <Link href="#" aria-label="Instagram">
+          <Link
+            href="https://www.instagram.com/midad_estates?igsh=MXM3aWo5MXVsa25pdg=="
+            target="_blank"
+            aria-label="Instagram"
+          >
             <LuInstagram className="w-5 h-5" />
           </Link>
-          <Link href="#" aria-label="Facebook">
+          <Link
+            href="https://www.facebook.com/people/Midad-Real-Estate/61558332323095/"
+            target="_blank"
+            aria-label="Facebook"
+          >
             <LuFacebook className="w-5 h-5" />
           </Link>
-          <Link href="#" aria-label="LinkedIn">
+          <Link
+            href="https://www.linkedin.com/company/midad-real-estate/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
             <LuLinkedin className="w-5 h-5" />
           </Link>
-          <Link href="#" aria-label="X">
+          <Link
+            href="https://X.com/MidadEstates"
+            target="_blank"
+            aria-label="X"
+          >
             <RiTwitterXLine className="w-5 h-5" />
           </Link>
         </div>
