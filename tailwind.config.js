@@ -9,13 +9,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        citadel: ['CitadelScript', 'sans-serif'],
-        editors: ['EditorsNote'],
-        helvetica: ['HelveticaNeue', 'sans-serif'], 
-
-
+        citadel: ["CitadelScript", "sans-serif"],
+        editors: ["EditorsNote"],
+        helvetica: ["HelveticaNeue", "sans-serif"],
       },
     },
   },
   plugins: [],
-}
+};

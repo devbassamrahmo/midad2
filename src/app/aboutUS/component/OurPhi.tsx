@@ -1,11 +1,11 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
 const OurPhi = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white px-4 sm:px-6 lg:px-10 xl:px-[95px]">
       {/* Title */}
-      <div className="py-16 sm:py-20 lg:py-24 flex items-center justify-center">
+      <div className="py-16 sm:py-20  lg:py-24 flex items-center justify-center">
         <h1 className="text-[#4C231A] font-editors font-bold text-[26px] sm:text-[32px] lg:text-[37px]">
           Our Philosophy
         </h1>
@@ -78,16 +78,16 @@ const OurPhi = () => {
       </div>
 
       {/* Paragraph */}
-      <div className="py-12 sm:py-16 lg:py-24 flex items-center justify-center">
-        <p className="text-[#4C231A] font-editors font-bold text-center text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] w-11/12 sm:w-4/5 lg:w-3/5">
-          We believe real estate is about impact — cultural, social, and economic.
-          By blending innovation with authenticity, we create destinations that
-          inspire pride, strengthen community bonds, and embody the Kingdom’s bold
-          vision for the future.
+      <div className="py-6 sm:py-16 lg:py-24 flex items-center justify-center">
+        <p className="text-[#4C231A] font-editors font-medium  text-center text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] w-11/12 sm:w-4/5 lg:w-3/5">
+          We believe real estate is about impact — cultural, social, and
+          economic. By blending innovation with authenticity, we create
+          destinations that inspire pride, strengthen community bonds, and
+          embody the Kingdom’s bold vision for the future.
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default OurPhi
+export default OurPhi;

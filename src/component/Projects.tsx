@@ -1,24 +1,40 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 interface DataProps {
-  title: string
-  desc: string
-  image: string
+  title: string;
+  desc: string;
+  image: string;
 }
 
 const Projects = () => {
   const data: DataProps[] = [
-    { title: 'Jeddah', desc: 'Four Seasons Hotel & Private Residences', image: '/featured/Rectangle1.svg' },
-    { title: 'Jeddah', desc: 'Crystal Gallery', image: '/featured/Rectangle2.svg' },
-    { title: 'Jeddah', desc: 'Stars Avenue Mall', image: '/featured/Rectangle3.svg' },
-    { title: 'Jeddah', desc: 'Zohur Beach Residential Compound', image: '/featured/Rectangle4.svg' },
-    { title: 'Jeddah', desc: 'Coral Mall', image: '/featured/Rectangle5.svg' },
-  ]
+    {
+      title: "Jeddah",
+      desc: "Four Seasons Hotel & Private Residences",
+      image: "/featured/Rectangle1.svg",
+    },
+    {
+      title: "Jeddah",
+      desc: "Crystal Gallery",
+      image: "/featured/Rectangle2.svg",
+    },
+    {
+      title: "Jeddah",
+      desc: "Stars Avenue Mall",
+      image: "/featured/Rectangle3.svg",
+    },
+    {
+      title: "Jeddah",
+      desc: "Zohur Beach Residential Compound",
+      image: "/featured/Rectangle4.svg",
+    },
+    { title: "Jeddah", desc: "Coral Mall", image: "/featured/Rectangle5.svg" },
+  ];
 
   return (
-    <div className="w-full bg-white flex flex-col gap-[42px] py-16 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-28">
+    <div className="w-full  bg-[#FEFAF1] bg- flex flex-col gap-[42px] py-16 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-28">
       {/* Title */}
       <div className="text-center">
         <h1 className="text-[28px] sm:text-[32px] lg:text-[34px] font-editors text-[#4C231A]">
@@ -59,15 +75,13 @@ const Projects = () => {
       {/* Button */}
       <Link href="/projects" className="mx-auto">
         <div className="flex justify-center">
-          <button
-            className="h-[37px] bg-[#e4dedd] text-black w-[145px] backdrop-blur-md flex items-center justify-center rounded-full font-helvetica text-[14px]"
-          >
+          <button className="h-[37px] bg-[#e4dedd] text-[#4C231A] w-[145px] backdrop-blur-md flex items-center justify-center rounded-full font-helvetica text-[14px]">
             View All Projects
           </button>
         </div>
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

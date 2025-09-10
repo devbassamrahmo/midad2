@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
 const Hero = () => {
   return (
@@ -24,7 +24,8 @@ const Hero = () => {
           "
         >
           <h1 className="text-[22px] sm:text-[26px] md:text-[30px] lg:text-[34px] font-editors font-semibold text-center">
-            Shaping experiences,<span className="italic"> not just spaces</span>
+            Shaping experiences,
+            <span className="sm:italic"> not just spaces</span>
           </h1>
 
           <p className="w-full max-w-[600px] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] font-helvetica text-center">
@@ -37,7 +38,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

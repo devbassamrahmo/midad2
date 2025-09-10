@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
 const KeyFacts = () => {
   return (
@@ -8,7 +8,7 @@ const KeyFacts = () => {
         bg-white 
         grid grid-cols-1 
         gap-10
-        px-5 sm:px-8 lg:px-10 
+        px- sm:px-8 lg:px-10 
         py-10 sm:py-12
         xl:grid-cols-3   /* only at ≥1280px switch to 3-column */
       "
@@ -24,13 +24,13 @@ const KeyFacts = () => {
         "
       >
         {/* Key Facts */}
-        <div className="flex flex-col gap-8 sm:gap-10 xl:max-w-2xl">
+        <div className="flex flex-col gap-8 sm:gap-10 xl:max-w-2xl w-[90%]">
           <h1 className="text-[#4C231A] font-editors text-[26px] sm:text-[30px] xl:text-[34px]">
             Key Facts
           </h1>
 
           <div className="flex flex-col gap-5">
-            <div className="flex flex-col sm:flex-row sm:justify-center xl:justify-start gap-2 sm:gap-4">
+            <div className="flex flex-row justify-between sm:justify-center xl:justify-start gap-2 sm:gap-6">
               <h2 className="text-[#937835] font-editors text-[16px] sm:text-[18px]">
                 Location
               </h2>
@@ -39,16 +39,16 @@ const KeyFacts = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row sm:justify-center xl:justify-start gap-2 sm:gap-4">
+            <div className="flex flex-row  sm:justify-center xl:justify-start gap-2 sm:gap-6 justify-between">
               <h2 className="text-[#937835] font-editors text-[16px] sm:text-[18px]">
                 Completion
               </h2>
-              <p className="text-[#4C231A] font-helvetica text-[16px] sm:text-[18px] italic">
+              <p className="text-[#4C231A] font-helvetica  text-[16px] sm:text-[18px] italic">
                 2007
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row sm:justify-center xl:justify-start gap-2 sm:gap-4">
+            <div className="flex flex-row sm:justify-center xl:justify-start gap-2 sm:gap-6 justify-between">
               <h2 className="text-[#937835] font-editors text-[16px] sm:text-[18px]">
                 Size
               </h2>
@@ -57,7 +57,7 @@ const KeyFacts = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row sm:justify-center xl:justify-start gap-2 sm:gap-4">
+            <div className="flex justify-between flex-row sm:justify-center xl:justify-start gap-2 sm:gap-6">
               <h2 className="text-[#937835] font-editors text-[16px] sm:text-[18px]">
                 Type
               </h2>
@@ -69,7 +69,7 @@ const KeyFacts = () => {
         </div>
 
         {/* Looking Ahead */}
-        <div className="flex flex-col gap-4 sm:gap-5 mt-10 xl:max-w-2xl">
+        <div className="flex flex-col gap-4 sm:gap-5 mt-10 w-[90%] xl:max-w-2xl">
           <h1 className="text-[#4C231A] font-editors text-[26px] sm:text-[30px] xl:text-[34px]">
             Looking Ahead
           </h1>
@@ -77,9 +77,10 @@ const KeyFacts = () => {
             A destination that evolves with its city
           </h3>
           <p className="text-[#4C231A] font-helvetica text-[16px] sm:text-[18px] leading-relaxed">
-            With continuous upgrades and new experiences, Stars Avenue Mall remains a living symbol
-            of Midad’s vision — a space that grows with its community while inspiring pride and
-            setting new benchmarks for Saudi Arabia’s retail scene.
+            With continuous upgrades and new experiences, Stars Avenue Mall
+            remains a living symbol of Midad’s vision — a space that grows with
+            its community while inspiring pride and setting new benchmarks for
+            Saudi Arabia’s retail scene.
           </p>
         </div>
       </div>
@@ -95,7 +96,7 @@ const KeyFacts = () => {
         />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default KeyFacts
+export default KeyFacts;

@@ -1,11 +1,11 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
 const Hero = () => {
   return (
     <div className="w-full">
       {/* Hero Image */}
-      <div className="relative w-full h-[70vh] sm:h-[75vh] lg:h-[80vh]">
+      <div className="relative w-full h-[80vw] sm:h-[75vh] lg:h-[80vh]">
         <Image
           src="/projects/mall.svg"
           alt="hero"
@@ -28,8 +28,8 @@ const Hero = () => {
 
           {/* Keep layout single column at all sizes, just limit line-length nicely */}
           <p className="text-[#4C231A] font-helvetica text-[16px] sm:text-[18px] leading-relaxed text-center max-w-[620px]">
-            Since its opening in 2007, Stars Avenue Mall has stood as an established
-            icon of shopping and entertainment in Jeddah.
+            Since its opening in 2007, Stars Avenue Mall has stood as an
+            established icon of shopping and entertainment in Jeddah.
           </p>
 
           <p className="text-[#4C231A] font-helvetica text-[16px] sm:text-[18px] leading-relaxed text-center max-w-[620px]">
@@ -40,7 +40,7 @@ const Hero = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

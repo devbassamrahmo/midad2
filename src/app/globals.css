@@ -7,8 +7,6 @@
   --foreground: #171717;
 }
 
-
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -18,31 +16,58 @@
 
 /* CitadelScript */
 @font-face {
-  font-family: 'CitadelScript';
-  src: url('/fonts/CitadelScriptStd.otf') format('opentype');
+  font-family: "CitadelScript";
+  src: url("/fonts/CitadelScriptStd.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 /* EditorsNote Medium */
-@font-face {
+/* @font-face {
   font-family: 'EditorsNote';
   src: url('/fonts/EditorsNote-Medium-iF664322be6500a.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
+} */
+
+@font-face {
+  font-family: "EditorsNote";
+  src: url("/fonts/EditorsNote-Light-iF664322be5b734.otf") format("opentype");
+  font-weight: 400;
+}
+
+/* EditorsNote ExtraLight Regular */
+
+@font-face {
+  font-family: "EditorsNote";
+  src: url("/fonts/EditorsNote-ExtralightItalic-iF664322be48dd8.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "EditorsNote";
+  src: url("/fonts/EditorsNote-Extralight-iF664322be43be3.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+/* Medium */
+@font-face {
+  font-family: "EditorsNote";
+  src: url("/fonts/EditorsNote-Medium-iF664322be6500a.otf") format("opentype");
+  font-weight: 500;
 }
 
 /* Helvetica Neue Medium */
 @font-face {
-  font-family: 'HelveticaNeue';
-  src: url('/fonts/HelveticaNeueLight.otf') format('opentype');
+  font-family: "HelveticaNeue";
+  src: url("/fonts/HelveticaNeueLight.otf") format("opentype");
   font-weight: 500; /* Medium */
   font-style: normal;
 }
 
-
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -58,7 +83,6 @@ body {
   color: var(--background);
   background: var(--foreground);
   scroll-behavior: smooth;
- 
 }
 
 * {

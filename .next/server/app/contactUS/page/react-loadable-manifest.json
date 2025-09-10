@@ -1,0 +1,9 @@
+{
+  "[project]/node_modules/react-phone-input-2/lib/lib.js [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/node_modules/react-phone-input-2/lib/lib.js [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_react-phone-input-2_lib_lib_cf681f07.js",
+      "static/chunks/node_modules_react-phone-input-2_lib_lib_9f276dc9.js"
+    ]
+  }
+}

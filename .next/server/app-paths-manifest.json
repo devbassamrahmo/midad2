@@ -1,0 +1,14 @@
+{
+  "/Policy/page": "app/Policy/page.js",
+  "/TermsOfUse/page": "app/TermsOfUse/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/aboutUS/page": "app/aboutUS/page.js",
+  "/contactUS/page": "app/contactUS/page.js",
+  "/four-season/page": "app/four-season/page.js",
+  "/news/[slug]/page": "app/news/[slug]/page.js",
+  "/news/page": "app/news/page.js",
+  "/page": "app/page.js",
+  "/projects/[id]/page": "app/projects/[id]/page.js",
+  "/projects/page": "app/projects/page.js",
+  "/projects/stars-avenue-mall/page": "app/projects/stars-avenue-mall/page.js"
+}

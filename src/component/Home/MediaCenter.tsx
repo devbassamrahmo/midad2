@@ -1,29 +1,29 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import React, { useEffect, useRef, useState } from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import React, { useEffect, useRef, useState } from "react";
 
 const MediaCenter = () => {
-  const sectionRef = useRef<HTMLDivElement | null>(null)
-  const [inView, setInView] = useState(false)
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const [inView, setInView] = useState(false);
 
   useEffect(() => {
-    if (!sectionRef.current) return
+    if (!sectionRef.current) return;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            setInView(true)
+            setInView(true);
           }
-        })
+        });
       },
       { threshold: 0.2 }
-    )
+    );
 
-    observer.observe(sectionRef.current)
-    return () => observer.disconnect()
-  }, [])
+    observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div
@@ -84,9 +84,11 @@ const MediaCenter = () => {
           text-center lg:text-left
           lg:ml-[30%] xl:ml-[35%] lg:mr-[35%]
           mt-8 lg:mt-0
-          ${inView
-            ? 'animate__animated animate__fadeInDown animate__slow'
-            : 'opacity-0 translate-y-4'}
+          ${
+            inView
+              ? "animate__animated animate__fadeInDown animate__slow"
+              : "opacity-0 translate-y-4"
+          }
         `}
       >
         <div className="font-editors text-[#4C231A] leading-snug text-[28px] sm:text-[32px] lg:text-[36px]">
@@ -114,14 +116,14 @@ const MediaCenter = () => {
               flex items-center justify-center
               rounded-full font-helvetica text-[14px]
             "
-            style={{ boxShadow: 'inset 0 0 4px rgba(0,0,0,0.1)' }}
+            style={{ boxShadow: "inset 0 0 4px rgba(0,0,0,0.1)" }}
           >
             Media Center
           </Link>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MediaCenter
+export default MediaCenter;
